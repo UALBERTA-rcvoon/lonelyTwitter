@@ -1,3 +1,17 @@
+/**
+ * <h1>LonelyTwitterActivity</h1>
+ * LonelyTwitterActivity is the main activity which runs when the app starts.
+ *
+ *
+ * @author  Riley Voon
+ * @version 1.0
+ * @since   2018-09-18
+ *
+ * © 2018 Riley Voon.  All rights reserved.
+ *
+ */
+
+
 package ca.ualberta.cs.lonelytwitter;
 
 import java.io.BufferedReader;
@@ -35,8 +49,10 @@ public class LonelyTwitterActivity extends Activity {
 	ArrayList<Tweet> tweetList;
 	ArrayAdapter<Tweet> adapter;
 
-	/** Called when the activity is first created. */
 	@Override
+	/**
+	 * Create the views, text prompts, and
+	 */
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
@@ -69,7 +85,11 @@ public class LonelyTwitterActivity extends Activity {
 	}
 
 	@Override
+	/**
+	 * Start of the application.
+	 */
 	protected void onStart() {
+
 		super.onStart();
 		loadFromFile();
 		adapter = new ArrayAdapter<Tweet>(this,
@@ -95,6 +115,9 @@ public class LonelyTwitterActivity extends Activity {
 		}
 	}
 
+	/**
+	 * Saves the tweetList to a file.
+	 */
 	private void saveInFile() {
 		try {
 			FileOutputStream fos = openFileOutput(FILENAME,
@@ -115,6 +138,10 @@ public class LonelyTwitterActivity extends Activity {
 			throw new RuntimeException();
 		}
 	}
+
+	/**
+	 * Deletes all tweets in the history.
+	 */
 	private void delete() {
 		tweetList = new ArrayList<Tweet>(0);
 		saveInFile();
