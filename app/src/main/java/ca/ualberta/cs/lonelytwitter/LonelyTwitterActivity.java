@@ -10,7 +10,7 @@
  * © 2018 Riley Voon.  All rights reserved.
 
  */
-// fixed dangling Javadoc errors
+// fixed dangling Javadoc errors to clean up documentation
 package ca.ualberta.cs.lonelytwitter;
 
 import java.io.BufferedReader;
@@ -23,7 +23,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
-// removed unnecessary imports
+// removed unnecessary imports to clean up code
 
 import android.app.Activity;
 import android.content.Context;
@@ -43,8 +43,8 @@ public class LonelyTwitterActivity extends Activity {
 	private EditText bodyText;
 	private ListView oldTweetsList;
 
-	private ArrayList<Tweet> tweetList; // changed to private variable
-	private ArrayAdapter<Tweet> adapter; // changed to private variable
+	private ArrayList<Tweet> tweetList; // changed to private variable, proper information hiding
+	private ArrayAdapter<Tweet> adapter; // changed to private variable, proper information hiding
 
 	/**
 	 * Create the views, text prompts, and

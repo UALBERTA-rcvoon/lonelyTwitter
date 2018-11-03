@@ -32,7 +32,7 @@ public abstract class Tweet implements Tweetable {
     Tweet() {
         this.date = new Date();
         this.message = "I am default message";
-        this.moodList = new ArrayList<CurrentMood>(); // assign moodList to an empty arraylist
+        this.moodList = new ArrayList<CurrentMood>(); // assign moodList to an empty arraylist so moodList is assigned somewhere
     }
     /**
     * Constructor which accepts a String.
@@ -41,6 +41,7 @@ public abstract class Tweet implements Tweetable {
     Tweet(String message) {
         this.date = new Date();
         this.message = message;
+        this.moodList = new ArrayList<CurrentMood>(); // assign moodList to an empty arraylist so moodList is assigned somewhere
     }
     /**
     * Accessor method for date.
@@ -61,7 +62,7 @@ public abstract class Tweet implements Tweetable {
     * @param String variable.
     */
     public void setMessage(String message) throws TweetTooLongException {
-        if (message.length() <= MAX_CHARS) { // access by instance reference instead of this.MAX_CHARS
+        if (message.length() <= MAX_CHARS) { // access by instance reference instead of this.MAX_CHARS, better form
             this.message = message;
         }
         else {
