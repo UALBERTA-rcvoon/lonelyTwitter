@@ -1,32 +1,29 @@
-/**
- * <h1>LonelyTwitterActivity</h1>
- * LonelyTwitterActivity is the main activity which runs when the app starts.
- *
- *
- * @author  Riley Voon
+/*
+  <h1>LonelyTwitterActivity</h1>
+  LonelyTwitterActivity is the main activity which runs when the app starts.
+
+
+  @author  Riley Voon
  * @version 1.0
  * @since   2018-09-18
  *
  * © 2018 Riley Voon.  All rights reserved.
- *
+
  */
-
-
+// fixed dangling Javadoc errors
 package ca.ualberta.cs.lonelytwitter;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.Date;
+// removed unnecessary imports
 
 import android.app.Activity;
 import android.content.Context;
@@ -46,13 +43,13 @@ public class LonelyTwitterActivity extends Activity {
 	private EditText bodyText;
 	private ListView oldTweetsList;
 
-	ArrayList<Tweet> tweetList;
-	ArrayAdapter<Tweet> adapter;
+	private ArrayList<Tweet> tweetList; // changed to private variable
+	private ArrayAdapter<Tweet> adapter; // changed to private variable
 
-	@Override
 	/**
 	 * Create the views, text prompts, and
 	 */
+	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
@@ -84,10 +81,10 @@ public class LonelyTwitterActivity extends Activity {
 		});
 	}
 
-	@Override
 	/**
 	 * Start of the application.
 	 */
+	@Override
 	protected void onStart() {
 
 		super.onStart();
